@@ -42,6 +42,8 @@ models.Order = models.Order.extend({
             var total = round_pr(this.get_total_with_tax(), this.pos.cash_rounding[0].rounding);
 
             var rounding_applied = total - this.get_total_with_tax();
+            // sometimes rounding_applied has more decimals than it should, "fix" it be calling round_pr again
+            rounding_applied = round_pr(rounding_applied, this.pos.currency.rounding);
             // because floor and ceil doesn't include decimals in calculation, we reuse the value of the half-up and adapt it.
             if (utils.float_is_zero(rounding_applied)){
                 // https://xkcd.com/217/
