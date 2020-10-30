@@ -572,12 +572,11 @@ var BarcodeReader = core.Class.extend({
         if (!code) {
             return;
         }
-        // The iotbox add a "B" in front of every codebar, I don't know why nor how to fix it.
+        // The iotbox add a "B" in front of every barcode, I don't know why nor how to fix it.
         // This is a workaround, better not use a barcodes starting with B now ^^
         if (code.charAt(0) === 'B'){
             code = code.substring(1);
         }
-        console.log(code);
         var parsed_result = this.barcode_parser.parse_barcode(code);
         if (this.action_callback[parsed_result.type]) {
             this.action_callback[parsed_result.type](parsed_result);
