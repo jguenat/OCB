@@ -209,7 +209,7 @@ msgstr "表示タイプ"
 #: code:addons/sale_management/models/digest.py:16
 #, python-format
 msgid "Do not have access, skip this data for user's digest email"
-msgstr ""
+msgstr "アクセス権がありません。ユーザーのダイジェストメールでこのデータをスキップしてください"
 
 #. module: sale_management
 #: sql_constraint:sale.order.template.line:0
@@ -422,14 +422,14 @@ msgstr ""
 msgid ""
 "Request a online signature to the customer in order to confirm orders "
 "automatically."
-msgstr ""
+msgstr "注文を自動的に確認するために、顧客にオンライン署名を要求します。"
 
 #. module: sale_management
 #: model:ir.model.fields,help:sale_management.field_sale_order_template__require_payment
 msgid ""
 "Request an online payment to the customer in order to confirm orders "
 "automatically."
-msgstr ""
+msgstr "注文を自動的に確認するために、顧客にオンライン支払いを要求します。"
 
 #. module: sale_management
 #: model:ir.model,name:sale_management.model_sale_order_option
@@ -481,7 +481,7 @@ msgstr "付番"
 #. module: sale_management
 #: model:ir.model.fields,help:sale_management.field_sale_order_template_line__display_type
 msgid "Technical field for UX purpose."
-msgstr ""
+msgstr "UXの目的のためのテクニカルフィールド。"
 
 #. module: sale_management
 #: model:ir.model.fields,field_description:sale_management.field_sale_order_template__note
