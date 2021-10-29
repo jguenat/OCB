@@ -1261,7 +1261,7 @@ msgstr "Rabattbelopp"
 #. module: sale
 #: model:ir.model.fields,field_description:sale.field_product_pricelist__discount_policy
 msgid "Discount Policy"
-msgstr ""
+msgstr "Rabatt Policy"
 
 #. module: sale
 #: selection:product.pricelist,discount_policy:0
@@ -2567,7 +2567,7 @@ msgstr "Prislistor"
 #. module: sale
 #: model:ir.model.fields,field_description:sale.field_res_config_settings__multi_sales_price_method
 msgid "Pricelists Method"
-msgstr ""
+msgstr "Prislists Metod"
 
 #. module: sale
 #: selection:res.config.settings,multi_sales_price_method:0
@@ -3909,18 +3909,18 @@ msgstr "Belopp ex. moms"
 #. module: sale
 #: model:ir.model.fields,field_description:sale.field_sale_report__untaxed_amount_invoiced
 msgid "Untaxed Amount Invoiced"
-msgstr ""
+msgstr "Belopp ex. moms som har fakturerats"
 
 #. module: sale
 #: model:ir.model.fields,field_description:sale.field_sale_order_line__untaxed_amount_to_invoice
 #: model:ir.model.fields,field_description:sale.field_sale_report__untaxed_amount_to_invoice
 msgid "Untaxed Amount To Invoice"
-msgstr ""
+msgstr "Belopp ex. moms att fakturera"
 
 #. module: sale
 #: model:ir.model.fields,field_description:sale.field_sale_order_line__untaxed_amount_invoiced
 msgid "Untaxed Invoiced Amount"
-msgstr ""
+msgstr "Fakturerat belopp ex. moms "
 
 #. module: sale
 #: model:ir.model.fields,field_description:sale.field_sale_report__price_subtotal
@@ -3973,7 +3973,7 @@ msgstr "Granska order"
 #. module: sale
 #: model:ir.model.fields,field_description:sale.field_sale_order__validity_date
 msgid "Validity"
-msgstr ""
+msgstr "Giltighet"
 
 #. module: sale
 #: model:ir.model.fields,help:sale.field_sale_order__validity_date
