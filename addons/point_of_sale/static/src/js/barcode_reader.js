@@ -101,6 +101,12 @@ var BarcodeReader = core.Class.extend({
     scan: function (code) {
         if (!code) return;
 
+        // Odoo add a "B" in front of every barcode, I don't know why nor how to fix it.
+        // This is a workaround, better not use a barcodes starting with B now ^^
+        if (code.charAt(0) === 'B'){
+            code = code.substring(1);
+        }
+
         const callbacks = Object.keys(this.exclusive_callbacks).length
             ? this.exclusive_callbacks
             : this.action_callbacks;
