@@ -1005,9 +1005,12 @@ class HolidaysRequest(models.Model):
 
     def action_validate(self):
         current_employee = self.env.user.employee_id
-        leaves = self.filtered(lambda l: l.employee_id and not l.number_of_days)
-        if leaves:
-            raise ValidationError(_('The following employees are not supposed to work during that period:\n %s') % ','.join(leaves.mapped('employee_id.name')))
+        # Sometimes you want to be able to create a holiday event for standard non-working day.
+        # Gecko has a lot of part time hourly paid employees, there is no realistic working calendar.
+        # An average time is set each days, excluding weekend. But sometimes employee work on weekends nontheless.
+        # leaves = self.filtered(lambda l: l.employee_id and not l.number_of_days)
+        # if leaves:
+        #     raise ValidationError(_('The following employees are not supposed to work during that period:\n %s') % ','.join(leaves.mapped('employee_id.name')))
 
         if any(holiday.state not in ['confirm', 'validate1'] and holiday.validation_type != 'no_validation' for holiday in self):
             raise UserError(_('Time off request must be confirmed in order to approve it.'))
