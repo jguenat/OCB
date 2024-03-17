@@ -1579,7 +1579,10 @@ def db_monodb(httprequest=None):
     dbs = db_list(True, httprequest)
 
     # try the db already in the session
-    db_session = httprequest.session.db
+    if hasattr(httprequest, 'session'):
+        db_session = httprequest.session.db
+    else:
+        db_session = request.db
     if db_session in dbs:
         return db_session
 
