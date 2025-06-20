@@ -29,6 +29,7 @@ class PortalMailGroup(http.Controller):
             domain,
             groupby=['create_date:month'],
             aggregates=['__count'],
+            order='create_date:min DESC',
         )
 
         date_groups = []
